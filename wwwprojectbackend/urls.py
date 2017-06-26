@@ -10,6 +10,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'images', views.ImageViewSet)
 router.register(r'comments', views.CommentViewSet)
+router.register(r'faq', views.FAQViewSet)
 
 images_router = routers.NestedSimpleRouter(router, r'images', lookup='image')
 images_router.register(r'comments', views.NestedCommentViewSet)

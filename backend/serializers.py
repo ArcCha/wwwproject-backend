@@ -1,4 +1,4 @@
-from backend.models import Image, Comment
+from backend.models import Image, Comment, FAQ
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
@@ -21,3 +21,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'id', 'username', 'images')
+
+
+class FAQSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = FAQ
+        fields = ('url', 'question', 'answer')

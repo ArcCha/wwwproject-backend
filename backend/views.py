@@ -1,5 +1,5 @@
-from backend.models import Image, Comment
-from backend.serializers import ImageSerializer, UserSerializer, CommentSerializer
+from backend.models import Image, Comment, FAQ
+from backend.serializers import ImageSerializer, UserSerializer, CommentSerializer, FAQSerializer
 from backend.permissions import IsOwnerOrReadOnly
 from django.contrib.auth.models import User
 from rest_framework import generics, permissions, viewsets, mixins
@@ -7,6 +7,11 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from django.shortcuts import get_object_or_404
+
+
+class FAQViewSet(viewsets.ModelViewSet):
+    queryset = FAQ.objects.all()
+    serializer_class = FAQSerializer
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
