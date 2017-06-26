@@ -7,6 +7,7 @@ class Image(models.Model):
     owner = models.ForeignKey('auth.User',
                               related_name='images',
                               on_delete=models.CASCADE)
+    image = models.ImageField(max_length=255)
 
     class Meta:
         ordering = ('created',)

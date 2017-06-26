@@ -1,5 +1,7 @@
 Django==1.11.2
 djangorestframework==3.6.3
 drf-nested-routers==0.90.0
+olefile==0.44
+Pillow==4.1.1
 psycopg2==2.7.1
 pytz==2017.2

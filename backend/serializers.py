@@ -6,7 +6,7 @@ from rest_framework import serializers
 class ImageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Image
-        fields = ('url', 'title', 'owner')
+        fields = ('url', 'title', 'owner', 'image')
         read_only_fields = ('url', 'owner')
 
 
